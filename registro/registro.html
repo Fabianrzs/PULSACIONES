@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,58 +9,56 @@
     <script src="registro.js"></script>
     <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
-    <div class="container">
-        <header>
-            <h1 class="title">Pulsaciones WEB</h1>
-        </header>
-    
-        <nav>
-            <button class="nav-button" onclick="action()">
-               Menu
-            </button>
-            <a href="/index.html" class="nav Desaparecer">Inicio</a>
-            <a href="registro.html" class="nav Desaparecer">Registar</a>
-            <a href="/consulta/consulta.html" class="nav Desaparecer">Consultar</a>
-            <a href="http://wa.me/+573136516457" class="nav Desaparecer" target="_blank">Ayuda</a>
-        </nav>
-    
-        <main>
-            <section>
-                <form action="Registar">                    
-                    <label required >Identificacion</label>   <input required id="Identificacion" size="10px" type="text" >
-                    <br> <label>Nombre</label>   <input id="Nombre" type="text">
-                    <br> <label>Edad</label> <input id="Edad" size="1px" type="number">
-                    <br><label >Sexo</label>
-                    <select id="sexo">
+    <section>
+        <form action="Registar">
+            
+            <table border="1">
+                <tr >
+                    <td colspan = "2">Registro de Pulsaciones</td>
+                </tr>
+
+                <tr>
+                    <td>Identificacion:</td>
+                    <td><input required id="Identificacion" size="10px" type="text"></td>
+                </tr>
+                <tr>
+                    <td>Nombre</td>
+                    <td><input id="Nombre" type="text"></td>
+                </tr>
+                <tr>
+                    <td>Edad</td>
+                    <td><input id="Edad" size="1px" type="number"></td>
+                </tr>
+                <tr>
+                    <td>sexo</td>
+                    <td><select id="sexo">
                         <option value="Masculino">Masculino</option>
                         <option value="Femenino">Femenino</option>
-                    </select>
-                    <br><label>Numero de Pulsaciones</label> <input id="Pulsaciones" type="number" >
-                    <button  type="button" onclick="calcularPulsaciones()">Calcular</button>
-                </form>       
-            </section>
-        
-            <aside>
-                <img src="/imagen/frecuencia-cardiaca.png" alt="Imagen Pulsaciones">
-            </aside>
-        
-            <article>
-                <p>
-                    Para calcular el número de pulsaciones que debe tener una persona por cada 10 segundos de ejercicio aeróbico, 
-                    la fórmula que se aplica es:
-                    <br> cuando el sexo es femenino: pulsaciones = (220 -edad) /10 
-                    <br> cuando el sexo es masculino: pulsaciones = (210 -edad) /10
-                </p>
-            </article>
-        </main>
-    
-        <footer>
-            <p class="title">
-                RESERVADO POR EL CREADOR
-            </p>
-        </footer>
-    </div>
-    
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Pulsaciones</td>
+                    <td><input id="Pulsaciones" type="number"></td>
+                </tr>
+                <tr>
+                    <td colspan = "2">
+                        <button type="button" onclick="calcularPulsaciones()">Registrar Pulsaciones</button>
+                    </td>
+                </tr>
+            </table>
+            
+            
+            <!-- <label required>Identificacion</label> 
+            <br> <label>Nombre</label> 
+            <br> <label>Edad</label> 
+            <br><label>Sexo</label>
+            
+            <br><label>Numero de Pulsaciones</label> 
+            -->
+        </form>
+    </section>
 </body>
+
 </html>
