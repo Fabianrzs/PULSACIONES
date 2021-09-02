@@ -8,17 +8,18 @@
     <title>Pulsaciones WEB</title>
     <script src="registro.js"></script>
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="registro.css">
+
 </head>
 
 <body>
     <section>
         <form action="Registar">
             
-            <table border="1">
-                <tr >
-                    <td colspan = "2">Registro de Pulsaciones</td>
+            <table border="0">
+                <tr>
+                    <td colspan = "2";  class="cabecera">Registro de Pulsaciones</td>
                 </tr>
-
                 <tr>
                     <td>Identificacion:</td>
                     <td><input required id="Identificacion" size="10px" type="text"></td>
@@ -33,7 +34,7 @@
                 </tr>
                 <tr>
                     <td>sexo</td>
-                    <td><select id="sexo">
+                    <td><select id="Sexo">
                         <option value="Masculino">Masculino</option>
                         <option value="Femenino">Femenino</option>
                     </select></td>
@@ -44,19 +45,10 @@
                 </tr>
                 <tr>
                     <td colspan = "2">
-                        <button type="button" onclick="calcularPulsaciones()">Registrar Pulsaciones</button>
+                        <button type="button" onclick="guardar()">Registrar Pulsaciones</button>
                     </td>
                 </tr>
             </table>
-            
-            
-            <!-- <label required>Identificacion</label> 
-            <br> <label>Nombre</label> 
-            <br> <label>Edad</label> 
-            <br><label>Sexo</label>
-            
-            <br><label>Numero de Pulsaciones</label> 
-            -->
         </form>
     </section>
 </body>
