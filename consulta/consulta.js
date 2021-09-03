@@ -1,18 +1,17 @@
 function loadTablet(){
    
-    var pulsaciones = [] = localStorage.getItem('datos');
+    var pulsaciones  = JSON.parse(localStorage.getItem('datos'));
     var pv = "";
 
-    pulsaciones.forEach(element => {
-
+    for (let item in pulsaciones) {
         pv += "<tr>"
-            pv += "<td>" + item.identifiacion + "</td>"
-            pv += "<td>" + item.nombre + "</td>"
-            pv += "<td>" + item.edad + "</td>"
-            pv += "<td>" + item.sexo + "</td>"
+            pv += "<td>" + item.Identifiacion + "</td>"
+            pv += "<td>" + item.Nombre + "</td>"
+            pv += "<td>" + item.Edad + "</td>"
+            pv += "<td>" + item.Sexo + "</td>"
             pv += "<td>" + item.pulsaciones + "</td>"
         pv += "</tr>"
-    });
+    }
 
     document.getElementById("tbCuerpo").innerHTML = pv;
 
